@@ -483,3 +483,8 @@ integrations:
     url: "https://feedhammer.com"
     image: extras/feedhammer.png
     category: 3
+  - title: "MindCloud"
+    description: "Connect Basecamp to Salesforce and 3,100+ apps. Automate workflows across your tools with zero manual data entry."
+    url: "https://mindcloud.co/apps/basecamp/integrations/salesforce"
+    image: extras/mindcloud.png
+    category: 1
