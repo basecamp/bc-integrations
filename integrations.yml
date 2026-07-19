@@ -63,6 +63,11 @@ integrations:
     url: "https://www.dnscheck.co/basecamp-3"
     image: extras/dns-check.png
     category: 3
+  - title: "Le Gantt"
+    description: "Add interactive Gantt charts to Basecamp. Plan timelines, manage task dependencies, visualize the critical path, and track project progress."
+    url: "https://www.legantt.com/extensions/basecamp?utm_source=basecamp"
+    image: extras/le-gantt.png
+    category: 3
   - title: "Ganttify"
     description: "Ganttify enables you to easily create gantt charts from your Basecamp projects."
     url: "https://www.gantt-chart.com"
