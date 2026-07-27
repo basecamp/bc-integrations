@@ -318,9 +318,9 @@ integrations:
     url: "https://project-management.relokia.com/basecamp/"
     image: extras/pm-migration-relokia.png
     category: 7
-  - title: "Pro Backup"
-    description: "Get daily, automated backups of your Basecamp account."
-    url: "https://probackup.io/backup/basecamp?utm_source=basecamp_extras"
+  - title: "ProBackup"
+    description: "Daily, automated backups of your Basecamp account — projects, to-dos, messages, documents & files. Granular one-click restore of deleted data."
+    url: "https://www.probackup.io/backup/basecamp?utm_source=basecamp&utm_medium=marketplace&utm_campaign=marketplace-listing"
     image: extras/probackup.png
     category: 4
   - title: "DataGrail"
