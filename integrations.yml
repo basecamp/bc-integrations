@@ -483,3 +483,8 @@ integrations:
     url: "https://feedhammer.com"
     image: extras/feedhammer.png
     category: 3
+  - title: "Solito"
+    description: "Automate Basecamp with AI workflows. Create to-dos, post messages, and keep projects in sync with hundreds of other apps."
+    url: "https://solito.app/dashboard/tools/basecamp"
+    image: extras/solito.png
+    category: 1
