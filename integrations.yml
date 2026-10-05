@@ -474,8 +474,8 @@ integrations:
     image: extras/context-link.png
     category: 6
   - title: "Assistant"
-    description: "Add Kanban Board View, Custom fields, Automations, Voice Messages and unread notification highlights to Basecamp. Organize work without leaving Basecamp."
-    url: "https://www.getassistant.io/help/getting-started/"
+    description: "Kanban boards, custom fields, tags, statuses, automations, AI voice-note transcription and card table duplication, all inside Basecamp. Chrome extension."
+    url: "https://getassistant.io/help/getting-started/"
     image: extras/assistant-for-basecamp.png
     category: 1
   - title: "Feedhammer"
