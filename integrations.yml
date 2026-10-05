@@ -379,7 +379,7 @@ integrations:
     image: extras/helpwise.png
     category: 7
   - title: "Can Do!"
-    description: "Supercharge your Basecamp account. Publish blogs and knowledge bases, mass create, bulk archive, broadcast messages, Zoom, and much more!"
+    description: "The missing half of Basecamp. Forms that feed Basecamp with to-dos, cards or messages. Knowledge bases, blogs and roadmaps on your own domain. Bulk tools."
     url: "https://getcando.com"
     image: extras/cando.png
     category: 1
