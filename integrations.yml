@@ -503,3 +503,8 @@ integrations:
     url: "https://taskbullet.com/integrations/basecamp?utm_source=basecamp&utm_medium=marketplace&utm_campaign=basecamp_marketplace"
     image: extras/taskbullet.png
     category: 1
+  - title: "Solito"
+    description: "Automate Basecamp with AI workflows. Create to-dos, post messages, and keep projects in sync with hundreds of other apps."
+    url: "https://solito.app/dashboard/tools/basecamp"
+    image: extras/solito.png
+    category: 1
