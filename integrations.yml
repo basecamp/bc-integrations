@@ -28,6 +28,11 @@ categories:
     slug: dev-tools
 
 integrations:
+  - title: "Cal ID"
+    description: "Easily schedule meetings on your Basecamp Project Calendar using Cal ID."
+    url: "https://cal.id/apps/basecamp3"
+    image: extras/cal-id.png
+    category: 3
   - title: "Digital Habits: To-Do"
     description: "Keep your Basecamp to-dos in sight with floating task reminders, simple task lists, and easy time tracking. Open-source and collects zero user data."
     url: "https://digitalhabits.org/to-do"
