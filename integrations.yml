@@ -28,10 +28,15 @@ categories:
     slug: dev-tools
 
 integrations:
-  - title: "ReDD Do"
-    description: "Keep your to-dos from Basecamp in sight with floating task reminders, simple task lists, and easy time tracking. ReDD Do is open-source and collects zero user data."
-    url: "https://reddfocus.org/do"
-    image: extras/redd-todo.png
+  - title: "Cal ID"
+    description: "Easily schedule meetings on your Basecamp Project Calendar using Cal ID."
+    url: "https://cal.id/apps/basecamp3"
+    image: extras/cal-id.png
+    category: 3
+  - title: "Digital Habits: To-Do"
+    description: "Keep your Basecamp to-dos in sight with floating task reminders, simple task lists, and easy time tracking. Open-source and collects zero user data."
+    url: "https://digitalhabits.org/to-do"
+    image: extras/digital-habits-todo.png
     category: 1
   - title: "Deskpro"
     description: "Link your Basecamp cards to your Deskpro tickets to streamline communication with users by making them easy to view and update."
@@ -62,6 +67,11 @@ integrations:
     description: "DNS Check enables you to easily monitor, share, and troubleshoot DNS records."
     url: "https://www.dnscheck.co/basecamp-3"
     image: extras/dns-check.png
+    category: 3
+  - title: "Le Gantt"
+    description: "Add interactive Gantt charts to Basecamp. Plan timelines, manage task dependencies, visualize the critical path, and track project progress."
+    url: "https://www.legantt.com/extensions/basecamp?utm_source=basecamp"
+    image: extras/le-gantt.png
     category: 3
   - title: "Ganttify"
     description: "Ganttify enables you to easily create gantt charts from your Basecamp projects."
@@ -318,9 +328,9 @@ integrations:
     url: "https://project-management.relokia.com/basecamp/"
     image: extras/pm-migration-relokia.png
     category: 7
-  - title: "Pro Backup"
-    description: "Get daily, automated backups of your Basecamp account."
-    url: "https://probackup.io/backup/basecamp?utm_source=basecamp_extras"
+  - title: "ProBackup"
+    description: "Daily, automated backups of your Basecamp account — projects, to-dos, messages, documents & files. Granular one-click restore of deleted data."
+    url: "https://www.probackup.io/backup/basecamp?utm_source=basecamp&utm_medium=marketplace&utm_campaign=marketplace-listing"
     image: extras/probackup.png
     category: 4
   - title: "DataGrail"
@@ -355,8 +365,8 @@ integrations:
     category: 5
   - title: "Moon HRM"
     description: "Time tracker, sprint and to-do synchronization for seamless collaboration."
-    url: "https://www.moonapps.xyz/basecamp-extension/"
-    image: extras/hrm.png
+    url: "https://www.moonhrm.com/integration/"
+    image: extras/hrmlogo.png
     category: 2
   - title: "SureTriggers"
     description: "SureTriggers is a web-based automation tool that allows users to connect and automate processes between different online services, applications and WordPress plugins."
@@ -379,7 +389,7 @@ integrations:
     image: extras/helpwise.png
     category: 7
   - title: "Can Do!"
-    description: "Supercharge your Basecamp account. Publish blogs and knowledge bases, mass create, bulk archive, broadcast messages, Zoom, and much more!"
+    description: "The missing half of Basecamp. Forms that feed Basecamp with to-dos, cards or messages. Knowledge bases, blogs and roadmaps on your own domain. Bulk tools."
     url: "https://getcando.com"
     image: extras/cando.png
     category: 1
@@ -474,8 +484,8 @@ integrations:
     image: extras/context-link.png
     category: 6
   - title: "Assistant"
-    description: "Add Kanban Board View, Custom fields, Automations, Voice Messages and unread notification highlights to Basecamp. Organize work without leaving Basecamp."
-    url: "https://www.getassistant.io/help/getting-started/"
+    description: "Kanban boards, custom fields, tags, statuses, automations, AI voice-note transcription and card table duplication, all inside Basecamp. Chrome extension."
+    url: "https://getassistant.io/help/getting-started/"
     image: extras/assistant-for-basecamp.png
     category: 1
   - title: "Feedhammer"
@@ -483,6 +493,11 @@ integrations:
     url: "https://feedhammer.com"
     image: extras/feedhammer.png
     category: 3
+  - title: "MindCloud"
+    description: "Connect Basecamp to Salesforce and 3,100+ apps. Automate workflows across your tools with zero manual data entry."
+    url: "https://mindcloud.co/apps/basecamp/integrations/salesforce"
+    image: extras/mindcloud.png
+    category: 1
   - title: "TaskBullet"
     description: "Assign Basecamp to-dos to TaskBullet VAs via native Assign. Free trial (10 hours, no card). OAuth connect, hours tracking, dashboard."
     url: "https://taskbullet.com/integrations/basecamp?utm_source=basecamp&utm_medium=marketplace&utm_campaign=basecamp_marketplace"
