@@ -483,7 +483,7 @@ integrations:
     url: "https://context-link.ai/docs/connect-basecamp"
     image: extras/context-link.png
     category: 6
-  - title: "AI Agent: Tentmate"
+  - title: "Tentmate"
     description: "An AI teammate that works in Basecamp. Mention it in any thread, assign it to-dos or cards, or ping it, and it does the work and replies right there."
     url: "https://tentmate.ai/?utm_source=basecamp&utm_medium=marketplace&utm_campaign=basecamp_extras"
     image: extras/tentmate.png
