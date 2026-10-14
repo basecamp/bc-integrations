@@ -513,3 +513,8 @@ integrations:
     url: "https://solito.app/dashboard/tools/basecamp"
     image: extras/solito.png
     category: 1
+  - title: "Maito"
+    description: "An AI teammate in Slack and your AI assistant. Use Basecamp project context to investigate issues, work with to-dos, and prepare team updates."
+    url: "https://maito.app/blog/connect-basecamp-to-maito"
+    image: extras/maito.png
+    category: 3
