@@ -513,3 +513,8 @@ integrations:
     url: "https://solito.app/dashboard/tools/basecamp"
     image: extras/solito.png
     category: 1
+  - title: "Senomix Timesheets"
+    description: "Simplify your Basecamp time and estimate tracking with easy weekly timesheets and automatic timers."
+    url: "https://www.senomix.com/time-tracking/basecamp"
+    image: extras/senomix.png
+    category: 2
