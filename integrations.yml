@@ -28,6 +28,11 @@ categories:
     slug: dev-tools
 
 integrations:
+  - title: "CSV File Tools"
+    description: "Export the first page of Basecamp projects to CSV, up to 100 records. Review and edit a local copy without changing Basecamp."
+    url: "https://csvfile.tools/integrations/basecamp"
+    image: extras/csv-editor.png
+    category: 3
   - title: "Cal ID"
     description: "Easily schedule meetings on your Basecamp Project Calendar using Cal ID."
     url: "https://cal.id/apps/basecamp3"
