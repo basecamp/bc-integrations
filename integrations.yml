@@ -518,3 +518,8 @@ integrations:
     url: "https://www.senomix.com/time-tracking/basecamp"
     image: extras/senomix.png
     category: 2
+  - title: "Pinapprove"
+    description: "Clients review and approve designs, PDFs and videos in Pinapprove; each deliverable stays in sync as a Basecamp card or to-do."
+    url: "https://app.pinapprove.com/help/basecamp"
+    image: extras/pinapprove.png
+    category: 6
