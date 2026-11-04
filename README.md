@@ -21,6 +21,9 @@ To add your integration, please open a pull request.
     category: 1
   ```
 
+> [!IMPORTANT]
+> The `url` must be a page on your product's own site, app or help center. We don't list code repositories (GitHub, GitLab, Bitbucket), even for open-source tools.
+
 A check runs on your pull request and lists anything that needs fixing.
 
 Thank you!
