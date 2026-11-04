@@ -369,7 +369,7 @@ integrations:
     image: extras/hrmlogo.png
     category: 2
   - title: "SureTriggers"
-    description: "SureTriggers is a web-based automation tool that allows users to connect and automate processes between different online services, applications and WordPress plugins."
+    description: "A web-based automation tool that allows users to connect and automate processes between different online services, applications and WordPress plugins."
     url: "https://suretriggers.com/integrations/basecamp/"
     image: extras/suretrigger.png
     category: 1
@@ -379,7 +379,7 @@ integrations:
     image: extras/claritee.png
     category: 6
   - title: "Nusii"
-    description: "Proposal software that enables you to create Basecamp projects from signed proposals and automatically attach the signed proposal as a PDF directly within your Basecamp projects."
+    description: "Proposal software that enables you to create Basecamp projects from signed proposals and attach the signed proposal as a PDF within your Basecamp projects."
     url: "https://nusii.com/integrations/basecamp/"
     image: extras/nusii.png
     category: 8
