@@ -85,7 +85,7 @@ integrations:
     category: 3
   - title: "TestLodge"
     description: "A test management tool that creates to-dos whenever a test fails, allowing you to use Basecamp as an issue tracker."
-    url: "http://www.testlodge.com"
+    url: "https://www.testlodge.com"
     image: extras/testlodge.png
     category: 5
   - title: "Everhour"
@@ -369,7 +369,7 @@ integrations:
     image: extras/hrmlogo.png
     category: 2
   - title: "SureTriggers"
-    description: "SureTriggers is a web-based automation tool that allows users to connect and automate processes between different online services, applications and WordPress plugins."
+    description: "A web-based automation tool that allows users to connect and automate processes between different online services, applications and WordPress plugins."
     url: "https://suretriggers.com/integrations/basecamp/"
     image: extras/suretrigger.png
     category: 1
@@ -379,7 +379,7 @@ integrations:
     image: extras/claritee.png
     category: 6
   - title: "Nusii"
-    description: "Proposal software that enables you to create Basecamp projects from signed proposals and automatically attach the signed proposal as a PDF directly within your Basecamp projects."
+    description: "Proposal software that enables you to create Basecamp projects from signed proposals and attach the signed proposal as a PDF within your Basecamp projects."
     url: "https://nusii.com/integrations/basecamp/"
     image: extras/nusii.png
     category: 8
@@ -513,6 +513,11 @@ integrations:
     url: "https://solito.app/dashboard/tools/basecamp"
     image: extras/solito.png
     category: 1
+  - title: "Senomix Timesheets"
+    description: "Simplify your Basecamp time and estimate tracking with easy weekly timesheets and automatic timers."
+    url: "https://www.senomix.com/time-tracking/basecamp"
+    image: extras/senomix.png
+    category: 2
   - title: "Maito"
     description: "An AI teammate in Slack and your AI assistant. Use Basecamp project context to investigate issues, work with to-dos, and prepare team updates."
     url: "https://maito.app/blog/connect-basecamp-to-maito"
