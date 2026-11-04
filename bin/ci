@@ -4,6 +4,7 @@
 
 require "yaml"
 require "uri"
+require "zlib"
 
 ROOT = File.expand_path("..", __dir__)
 DATA_FILE = "integrations.yml"
@@ -19,9 +20,30 @@ MARKUP = /[<>*_`\[\]\\#]|\A(?:[-+]|\d+\.)\s/
 URL = %r{\Ahttps://[^\s"'<>\\]+\z}
 IMAGE = %r{\Aextras/[a-z0-9][a-z0-9._-]*\.png\z}
 
+# Reads every chunk, not just the header, so an upload that was cut off or damaged fails here
+# instead of showing as a broken image on the site. Returns [width, height], or nil if the file isn't a whole PNG.
 def png_size(path)
-  header = File.binread(path, 24)
-  header[16, 8].unpack("NN") if header && header.size == 24 && header.start_with?(PNG_SIGNATURE) && header[12, 4] == "IHDR"
+  data = File.binread(path)
+  return unless data.start_with?(PNG_SIGNATURE)
+
+  chunks = []
+  offset = PNG_SIGNATURE.size
+  while offset + 12 <= data.size
+    length, type = data[offset, 8].unpack("Na4")
+    body = data[offset + 8, length]
+    crc = data[offset + 8 + length, 4]
+    return unless body && body.size == length && crc && crc.size == 4 && crc.unpack1("N") == Zlib.crc32(type + body)
+
+    chunks << [ type, body ]
+    offset += 12 + length
+    break if type == "IEND"
+  end
+  return unless offset == data.size && chunks.first && chunks.first[0] == "IHDR" && chunks.last[0] == "IEND"
+
+  Zlib::Inflate.inflate(chunks.select { |type, _| type == "IDAT" }.map { |_, body| body }.join)
+  chunks.first[1].unpack("NN")
+rescue Zlib::Error
+  nil
 end
 
 def text_problems(field, value)
@@ -71,7 +93,7 @@ def listing_problems(listing, category_ids)
     if !File.file?(icon)
       problems << "icon #{ICONS_DIR}/#{File.basename(image)} is missing"
     elsif (size = png_size(icon)).nil?
-      problems << "icon #{ICONS_DIR}/#{File.basename(image)} isn't a PNG file"
+      problems << "icon #{ICONS_DIR}/#{File.basename(image)} isn't a complete PNG file, it may be cut off or damaged"
     elsif size != ICON_SIZE
       problems << "icon #{ICONS_DIR}/#{File.basename(image)} is #{size.join("x")}, it must be #{ICON_SIZE.join("x")}"
     end
