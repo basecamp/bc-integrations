@@ -85,7 +85,7 @@ integrations:
     category: 3
   - title: "TestLodge"
     description: "A test management tool that creates to-dos whenever a test fails, allowing you to use Basecamp as an issue tracker."
-    url: "http://www.testlodge.com"
+    url: "https://www.testlodge.com"
     image: extras/testlodge.png
     category: 5
   - title: "Everhour"
