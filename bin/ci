@@ -1,0 +1,141 @@
+#!/usr/bin/env ruby
+# Checks integrations.yml and icons/ against the listing rules in the README.
+# Uses only Ruby's standard library so it runs anywhere Ruby does.
+
+require "yaml"
+require "uri"
+
+ROOT = File.expand_path("..", __dir__)
+DATA_FILE = "integrations.yml"
+ICONS_DIR = "icons"
+
+FIELDS = %w[ title description url image category ]
+MAX_DESCRIPTION = 160
+ICON_SIZE = [ 256, 256 ]
+PNG_SIGNATURE = "\x89PNG\r\n\x1a\n".b
+
+# The site renders titles and descriptions through Markdown, so anything it would turn into markup is refused.
+MARKUP = /[<>*_`\[\]\\#]|\A(?:[-+]|\d+\.)\s/
+URL = %r{\Ahttps://[^\s"'<>\\]+\z}
+IMAGE = %r{\Aextras/[a-z0-9][a-z0-9._-]*\.png\z}
+
+def png_size(path)
+  header = File.binread(path, 24)
+  header[16, 8].unpack("NN") if header && header.size == 24 && header.start_with?(PNG_SIGNATURE) && header[12, 4] == "IHDR"
+end
+
+def text_problems(field, value)
+  if !value.is_a?(String) || value.strip.empty?
+    [ "#{field} can't be blank" ]
+  elsif value != value.strip || value.include?("\n")
+    [ "#{field} can't have leading or trailing spaces or line breaks" ]
+  elsif value =~ MARKUP
+    [ "#{field} can't contain HTML or Markdown characters (< > * _ ` [ ] \\ #) or start like a list item" ]
+  else
+    []
+  end
+end
+
+def listing_problems(listing, category_ids)
+  return [ "must be a set of #{FIELDS.join(", ")}" ] unless listing.is_a?(Hash)
+
+  problems = []
+  missing = FIELDS - listing.keys
+  unknown = listing.keys - FIELDS
+  problems << "is missing #{missing.join(", ")}" if missing.any?
+  problems << "has unknown fields #{unknown.join(", ")}" if unknown.any?
+
+  problems.concat text_problems("title", listing["title"])
+  problems.concat text_problems("description", listing["description"])
+
+  description = listing["description"]
+  if description.is_a?(String) && description.size > MAX_DESCRIPTION
+    problems << "description is #{description.size} characters, the limit is #{MAX_DESCRIPTION}"
+  end
+
+  url = listing["url"]
+  unless url.is_a?(String) && url =~ URL && (URI.parse(url).host.to_s.include?(".") rescue false)
+    problems << "url must be a full https:// address, got #{url.inspect}"
+  end
+
+  category = listing["category"]
+  unless category.is_a?(Integer) && category_ids.include?(category)
+    problems << "category must be one of #{category_ids.join(", ")}, got #{category.inspect}"
+  end
+
+  image = listing["image"]
+  if !image.is_a?(String) || image !~ IMAGE
+    problems << "image must look like extras/your-name.png (lowercase letters, digits, dots, dashes, underscores), got #{image.inspect}"
+  else
+    icon = File.join(ROOT, ICONS_DIR, File.basename(image))
+    if !File.file?(icon)
+      problems << "icon #{ICONS_DIR}/#{File.basename(image)} is missing"
+    elsif (size = png_size(icon)).nil?
+      problems << "icon #{ICONS_DIR}/#{File.basename(image)} isn't a PNG file"
+    elsif size != ICON_SIZE
+      problems << "icon #{ICONS_DIR}/#{File.basename(image)} is #{size.join("x")}, it must be #{ICON_SIZE.join("x")}"
+    end
+  end
+
+  problems
+end
+
+def duplicates(values)
+  values.group_by { |value| value }.select { |_, group| group.size > 1 }.keys
+end
+
+def check
+  problems = []
+
+  begin
+    data = YAML.safe_load(File.read(File.join(ROOT, DATA_FILE)))
+  rescue Psych::Exception => error
+    return [ [ DATA_FILE, "isn't valid YAML: #{error.message}" ] ], 0
+  end
+
+  unless data.is_a?(Hash) && data.keys.sort == %w[ categories integrations ] && data["categories"].is_a?(Array) && data["integrations"].is_a?(Array)
+    return [ [ DATA_FILE, "must have exactly two lists, categories and integrations" ] ], 0
+  end
+
+  categories = data["categories"]
+  category_ids = categories.map { |category| category["category"] if category.is_a?(Hash) }
+  categories.each_with_index do |category, index|
+    unless category.is_a?(Hash) && category["category"].is_a?(Integer) && category["title"].is_a?(String) && category["slug"].is_a?(String)
+      problems << [ "#{DATA_FILE}: category ##{index + 1}", "needs an integer category, a title and a slug" ]
+    end
+  end
+  duplicates(category_ids).each { |id| problems << [ DATA_FILE, "category #{id} is defined more than once" ] }
+
+  listings = data["integrations"]
+  listings.each_with_index do |listing, index|
+    title = listing["title"] if listing.is_a?(Hash)
+    name = title.is_a?(String) && !title.strip.empty? ? title : "listing ##{index + 1}"
+    listing_problems(listing, category_ids).each { |problem| problems << [ "#{DATA_FILE}: #{name}", problem ] }
+  end
+
+  hashes = listings.select { |listing| listing.is_a?(Hash) }
+  duplicates(hashes.map { |listing| listing["title"].to_s.downcase }).each do |title|
+    problems << [ DATA_FILE, "more than one listing is titled #{title.inspect}" ]
+  end
+  duplicates(hashes.map { |listing| listing["image"] }).each do |image|
+    problems << [ DATA_FILE, "more than one listing uses #{image}" ]
+  end
+
+  used = hashes.map { |listing| File.basename(listing["image"].to_s) }
+  Dir.children(File.join(ROOT, ICONS_DIR)).sort.each do |file|
+    problems << [ "#{ICONS_DIR}/#{file}", "isn't used by any listing" ] unless used.include?(file)
+  end
+
+  [ problems, listings.size ]
+end
+
+problems, count = check
+
+if problems.empty?
+  puts "✓ #{count} listings pass"
+else
+  problems.each { |where, problem| puts "✗ #{where}: #{problem}" }
+  puts
+  puts "#{problems.size} #{problems.size == 1 ? "problem" : "problems"} found. The rules are in README.md."
+  exit 1
+end
