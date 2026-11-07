@@ -493,6 +493,11 @@ integrations:
     url: "https://tentmate.ai/?utm_source=basecamp&utm_medium=marketplace&utm_campaign=basecamp_extras"
     image: extras/tentmate.png
     category: 1
+  - title: "AI Coworker"
+    description: "AI teammate for Basecamp: write @AI Coworker in a comment and it answers in the thread. From 5 USD a month per person, or free with your own AI key."
+    url: "https://itskaivalya.com/ai-coworker/basecamp.html?utm_source=basecamp&utm_medium=marketplace&utm_campaign=basecamp_extras"
+    image: extras/ai-coworker.png
+    category: 1
   - title: "Assistant"
     description: "Kanban boards, custom fields, tags, statuses, automations, AI voice-note transcription and card table duplication, all inside Basecamp. Chrome extension."
     url: "https://getassistant.io/help/getting-started/"
