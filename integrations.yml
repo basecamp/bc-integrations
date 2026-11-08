@@ -528,3 +528,8 @@ integrations:
     url: "https://app.pinapprove.com/help/basecamp"
     image: extras/pinapprove.png
     category: 6
+  - title: "Miru"
+    description: "Say goodbye to feedback chaos. Visually annotate websites or files. Smooth sync with Basecamp's to-do list."
+    url: "https://www.usemiru.io/integrations/basecamp"
+    image: extras/miru.png
+    category: 6
