@@ -528,3 +528,8 @@ integrations:
     url: "https://app.pinapprove.com/help/basecamp"
     image: extras/pinapprove.png
     category: 6
+  - title: "Cedric"
+    description: "An AI teammate for your team chat and meetings. Ask him to post on a message board, add or complete to-dos, or check the schedule in Basecamp."
+    url: "https://app.meet-cedric.com/features"
+    image: extras/cedric.png
+    category: 1
