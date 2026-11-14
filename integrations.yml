@@ -528,3 +528,8 @@ integrations:
     url: "https://app.pinapprove.com/help/basecamp"
     image: extras/pinapprove.png
     category: 6
+  - title: "Asyntai AI Chatbot"
+    description: "AI chatbot for your website. Every visitor who leaves an email or phone number becomes a Basecamp to-do with the page and the whole chat."
+    url: "https://asyntai.com/documentation/integrations/basecamp/"
+    image: extras/asyntai.png
+    category: 7
