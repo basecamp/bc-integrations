@@ -528,3 +528,8 @@ integrations:
     url: "https://app.pinapprove.com/help/basecamp"
     image: extras/pinapprove.png
     category: 6
+  - title: "SpecStream"
+    description: "The live web data engine. Send a finished SpecStream list to a Basecamp project as a to-do list, one to-do per row with its values and source pages."
+    url: "https://api.specstream.ai/integrations/basecamp"
+    image: extras/specstream.png
+    category: 3
