@@ -28,6 +28,11 @@ categories:
     slug: dev-tools
 
 integrations:
+  - title: "feedback.tools"
+    description: "Turn customer feedback into Basecamp to-dos with source context, then close feedback tasks when the work is completed."
+    url: "https://feedback.tools/integrations/basecamp"
+    image: extras/feedback-tools.png
+    category: 7
   - title: "CSV File Tools"
     description: "Export the first page of Basecamp projects to CSV, up to 100 records. Review and edit a local copy without changing Basecamp."
     url: "https://csvfile.tools/integrations/basecamp"
