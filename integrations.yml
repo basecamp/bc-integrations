@@ -528,3 +528,8 @@ integrations:
     url: "https://app.pinapprove.com/help/basecamp"
     image: extras/pinapprove.png
     category: 6
+  - title: "Viktor"
+    description: "Ask Viktor in Slack or Teams to add to-dos, comment on work and summarize Basecamp projects. Changes wait for your approval when your workspace asks for it."
+    url: "https://viktor.com/integrations/basecamp?utm_source=basecamp&utm_medium=marketplace&utm_campaign=basecamp_extras"
+    image: extras/viktor.png
+    category: 1
