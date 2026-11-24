@@ -528,3 +528,8 @@ integrations:
     url: "https://app.pinapprove.com/help/basecamp"
     image: extras/pinapprove.png
     category: 6
+  - title: "Elaichi"
+    description: "Connect Basecamp to ChatGPT, Claude or Cursor. Your AI reads and updates projects, to-dos and cards as the person who signed in, and every action is logged."
+    url: "https://elaichi.ai/connectors/basecamp/?utm_source=basecamp-marketplace&utm_medium=listing"
+    image: extras/elaichi.png
+    category: 1
