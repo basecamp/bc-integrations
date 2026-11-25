@@ -528,3 +528,8 @@ integrations:
     url: "https://app.pinapprove.com/help/basecamp"
     image: extras/pinapprove.png
     category: 6
+  - title: "DoneThat"
+    description: "Automatic time tracking with no timer: links your recorded work to your assigned to-dos and logs the time on each one when you submit your day."
+    url: "https://donethat.ai/integrations/basecamp"
+    image: extras/donethat.png
+    category: 2
