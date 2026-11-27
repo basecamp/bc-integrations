@@ -538,3 +538,8 @@ integrations:
     url: "https://asyntai.com/documentation/integrations/basecamp/"
     image: extras/asyntai.png
     category: 7
+  - title: "NudgeHost"
+    description: "Send a NudgeHost link to a Basecamp project. It goes into Docs & Files under the file name and opens for anyone on the project, with no account needed."
+    url: "https://www.nudgehost.com/help/send-links-to-basecamp"
+    image: extras/nudgehost.png
+    category: 6
