@@ -553,3 +553,8 @@ integrations:
     url: "https://redreplier.com/features/basecamp-integration"
     image: extras/redreplier.png
     category: 6
+  - title: "Flowsery"
+    description: "Turn bugs Flowsery finds in session replays into Basecamp to-dos in a list you pick, by hand from an issue or automatically."
+    url: "https://flowsery.com/features/basecamp-integration"
+    image: extras/flowsery.png
+    category: 5
