@@ -528,6 +528,11 @@ integrations:
     url: "https://app.pinapprove.com/help/basecamp"
     image: extras/pinapprove.png
     category: 6
+  - title: "SaaSCity"
+    description: "Sync SaaSCity launches with Basecamp: turn homepage readiness checks into to-dos that close when fixed, and post launch status and upvote updates."
+    url: "https://saascity.io/integrations/basecamp"
+    image: extras/saascity.png
+    category: 6
   - title: "Asyntai AI Chatbot"
     description: "AI chatbot for your website. Every visitor who leaves an email or phone number becomes a Basecamp to-do with the page and the whole chat."
     url: "https://asyntai.com/documentation/integrations/basecamp/"
