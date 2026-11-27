@@ -528,6 +528,26 @@ integrations:
     url: "https://app.pinapprove.com/help/basecamp"
     image: extras/pinapprove.png
     category: 6
+  - title: "SaaSCity"
+    description: "Sync SaaSCity launches with Basecamp: turn homepage readiness checks into to-dos that close when fixed, and post launch status and upvote updates."
+    url: "https://saascity.io/integrations/basecamp"
+    image: extras/saascity.png
+    category: 6
+  - title: "Asyntai AI Chatbot"
+    description: "AI chatbot for your website. Every visitor who leaves an email or phone number becomes a Basecamp to-do with the page and the whole chat."
+    url: "https://asyntai.com/documentation/integrations/basecamp/"
+    image: extras/asyntai.png
+    category: 7
+  - title: "NudgeHost"
+    description: "Send a NudgeHost link to a Basecamp project. It goes into Docs & Files under the file name and opens for anyone on the project, with no account needed."
+    url: "https://www.nudgehost.com/help/send-links-to-basecamp"
+    image: extras/nudgehost.png
+    category: 6
+  - title: "AdaptlyPost"
+    description: "Get a line in a Basecamp project's Campfire when a scheduled social media post publishes, partly fails or fails."
+    url: "https://adaptlypost.com/features/basecamp-integration"
+    image: extras/adaptlypost.png
+    category: 6
   - title: "RedReplier"
     description: "Get new Reddit, X, Bluesky, Facebook and Hacker News mentions of your keywords as lines in a Basecamp project's Campfire."
     url: "https://redreplier.com/features/basecamp-integration"
