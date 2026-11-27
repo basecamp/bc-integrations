@@ -548,3 +548,8 @@ integrations:
     url: "https://adaptlypost.com/features/basecamp-integration"
     image: extras/adaptlypost.png
     category: 6
+  - title: "RedReplier"
+    description: "Get new Reddit, X, Bluesky, Facebook and Hacker News mentions of your keywords as lines in a Basecamp project's Campfire."
+    url: "https://redreplier.com/features/basecamp-integration"
+    image: extras/redreplier.png
+    category: 6
