@@ -543,3 +543,8 @@ integrations:
     url: "https://www.nudgehost.com/help/send-links-to-basecamp"
     image: extras/nudgehost.png
     category: 6
+  - title: "AdaptlyPost"
+    description: "Get a line in a Basecamp project's Campfire when a scheduled social media post publishes, partly fails or fails."
+    url: "https://adaptlypost.com/features/basecamp-integration"
+    image: extras/adaptlypost.png
+    category: 6
