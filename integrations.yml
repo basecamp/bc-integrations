@@ -563,3 +563,8 @@ integrations:
     url: "https://brixsignage.com/guides/digital-signage-basecamp-integration/"
     image: extras/brix.png
     category: 6
+  - title: "Seercraft"
+    description: "Seercraft posts your weekly competitor Meta ad briefing and opt-in big-move alerts to a Basecamp Chat: what rivals launched and stopped, plus 3 tests to run."
+    url: "https://seercraft.io/docs/basecamp"
+    image: extras/seercraft.png
+    category: 6
