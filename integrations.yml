@@ -28,6 +28,11 @@ categories:
     slug: dev-tools
 
 integrations:
+  - title: "GSC Wizard"
+    description: "Get Google Search Console SEO alerts in a Basecamp project Chat: traffic drops, pages that left the index and algorithm updates, with the numbers and a link."
+    url: "https://www.gscwizard.com/docs/basecamp.html"
+    image: extras/gsc-wizard.png
+    category: 6
   - title: "CSV File Tools"
     description: "Export the first page of Basecamp projects to CSV, up to 100 records. Review and edit a local copy without changing Basecamp."
     url: "https://csvfile.tools/integrations/basecamp"
@@ -563,6 +568,16 @@ integrations:
     url: "https://brixsignage.com/guides/digital-signage-basecamp-integration/"
     image: extras/brix.png
     category: 6
+  - title: "three.ws"
+    description: "Type !threews and a description in a Campfire or Ping to get a textured 3D model back in the room, with a 3D viewer, AR and a GLB download."
+    url: "https://three.ws/integrations/basecamp"
+    image: extras/threews.png
+    category: 6
+  - title: "Action Log"
+    description: "Pull status and owners from Basecamp to-dos into one executive view by workstream, with a project timeline and a weekly board scorecard."
+    url: "https://www.actionlog.app/help/basecamp"
+    image: extras/actionlog.png
+    category: 3
   - title: "Seercraft"
     description: "Seercraft posts your weekly competitor Meta ad briefing and opt-in big-move alerts to a Basecamp Chat: what rivals launched and stopped, plus 3 tests to run."
     url: "https://seercraft.io/docs/basecamp"
