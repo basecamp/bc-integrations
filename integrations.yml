@@ -28,6 +28,11 @@ categories:
     slug: dev-tools
 
 integrations:
+  - title: "GSC Wizard"
+    description: "Get Google Search Console SEO alerts in a Basecamp project Chat: traffic drops, pages that left the index and algorithm updates, with the numbers and a link."
+    url: "https://www.gscwizard.com/docs/basecamp.html"
+    image: extras/gsc-wizard.png
+    category: 6
   - title: "CSV File Tools"
     description: "Export the first page of Basecamp projects to CSV, up to 100 records. Review and edit a local copy without changing Basecamp."
     url: "https://csvfile.tools/integrations/basecamp"
