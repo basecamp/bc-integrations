@@ -568,3 +568,8 @@ integrations:
     url: "https://three.ws/integrations/basecamp"
     image: extras/threews.png
     category: 6
+  - title: "Action Log"
+    description: "Pull status and owners from Basecamp to-dos into one executive view by workstream, with a project timeline and a weekly board scorecard."
+    url: "https://www.actionlog.app/help/basecamp"
+    image: extras/actionlog.png
+    category: 3
