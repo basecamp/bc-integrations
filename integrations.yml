@@ -583,3 +583,8 @@ integrations:
     url: "https://seercraft.io/docs/basecamp"
     image: extras/seercraft.png
     category: 6
+  - title: "PatchMySEO"
+    description: "Get alerts in a project's chat when ChatGPT, Gemini or Perplexity stops or starts naming your brand, plus a Monday AI visibility summary."
+    url: "https://patchmyseo.com/integrations/basecamp"
+    image: extras/patchmyseo.png
+    category: 6
