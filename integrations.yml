@@ -558,3 +558,8 @@ integrations:
     url: "https://flowsery.com/features/basecamp-integration"
     image: extras/flowsery.png
     category: 5
+  - title: "Brix"
+    description: "Get a line in a Basecamp project's Chat when a digital signage screen goes offline, shows a blank picture or stops playing, with a link to the screen."
+    url: "https://brixsignage.com/guides/digital-signage-basecamp-integration/"
+    image: extras/brix.png
+    category: 6
