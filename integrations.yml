@@ -578,3 +578,8 @@ integrations:
     url: "https://www.actionlog.app/help/basecamp"
     image: extras/actionlog.png
     category: 3
+  - title: "Seercraft"
+    description: "Seercraft posts your weekly competitor Meta ad briefing and opt-in big-move alerts to a Basecamp Chat: what rivals launched and stopped, plus 3 tests to run."
+    url: "https://seercraft.io/docs/basecamp"
+    image: extras/seercraft.png
+    category: 6
